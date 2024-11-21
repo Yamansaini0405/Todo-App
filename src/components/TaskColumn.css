@@ -1,0 +1,22 @@
+.task_column_heading {
+    display: flex;
+    align-items: center;
+}
+
+.task_column_icon {
+    width: 30px;
+    margin-right: 5px;
+}
+.task_column {
+    border: 2px solid grey ;
+    padding: 10px 10px;
+    height: 70vh;
+    overflow: auto;
+    border-radius: 1.5rem;
+    box-shadow: 2px 2px 5px black;
+    transition: 0.3s ease;
+
+}
+.task_column:hover{
+    transform: scale(1.05);
+}
