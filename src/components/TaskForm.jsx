@@ -39,12 +39,12 @@ const TaskForm = ({setTasks}) => {
       return { ...prev, [name]: value };
       
     })
-    console.log(taskData)
+    
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(taskData)
+    
     setTasks(prev => {
         return [...prev, taskData]
     })

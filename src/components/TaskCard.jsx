@@ -4,9 +4,9 @@ import "./TaskCard.css";
 import Tag from "./Tag";
 import deleteIcon from "../assets/delete.png";
 
-const TaskCard = ({title,tags, handleDelete, index } ) => {
+const TaskCard = ({title,tags, handleDelete, index, setActiveCard } ) => {
   return (
-    <article className="task_card" draggable={true}>
+    <article className="task_card" draggable onDragStart={() => setActiveCard(index)} onDragEnd={() => setActiveCard(null)}>
       {/* {tasks.map((item) => {
         return (
           <>
@@ -28,7 +28,7 @@ const TaskCard = ({title,tags, handleDelete, index } ) => {
 
             <div className='task_card_bottom_line'>
                 <div className='task_card_tags'>
-                {tags.map((tag, idx) => <Tag key={idx} type={tag} selected={true}/>)}
+                {tags.map((tag, index) => <Tag key={index} type={tag} selected={true}/>)}
                 </div>
                 <div onClick={() => handleDelete(index)}
                     className='task_delete'
