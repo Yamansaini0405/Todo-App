@@ -58,6 +58,7 @@ const TaskForm = ({setTasks}) => {
 
   return (
     <header className="app_header">
+      
       <form onSubmit={handleSubmit} action="">
         <input
           required
@@ -69,10 +70,13 @@ const TaskForm = ({setTasks}) => {
           placeholder="Enter your task"
         />
         <div className="task_form_bottom_line">
+          <div>
           <Tag type="Imp" selectTag = {selectTag} selected={checkTag("Imp")}/>
           <Tag type="MostImp" selectTag = {selectTag} selected={checkTag("MostImp")}/>
           <Tag type="opt" selectTag = {selectTag} selected={checkTag("opt")}/>
+          </div>
 
+          <div>
           <select
             value={taskData.status}
             name="status"
@@ -86,6 +90,7 @@ const TaskForm = ({setTasks}) => {
           <button  className="task_submit" type="submit">
             +Add task
           </button>
+          </div>
         </div>
       </form>
     </header>

@@ -14,3 +14,13 @@
   width: 33.33%;
   margin: 20px;
 }
+@media (max-width: 768px){
+  .app_main{
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .task_column{
+    width: 85%;
+    
+  }
+}

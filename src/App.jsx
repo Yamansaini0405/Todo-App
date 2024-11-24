@@ -35,6 +35,7 @@ const App = () => {
   }
   return (
     <div className="app">
+      
       <TaskForm setTasks={setTasks} />
       <main className="app_main">
         <TaskColumn
@@ -65,7 +66,7 @@ const App = () => {
           onDrop={onDrop}
         />
       </main>
-      <h2>Actice Card - {activeCard}</h2>
+      
     </div>
   );
 };

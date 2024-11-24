@@ -55,3 +55,21 @@
     border: none;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    .task_form_bottom_line{
+        flex-wrap: wrap;
+        
+    }
+    .task_form_bottom_line div{
+        margin: 10px 0;
+    }
+    .task_input{
+        margin-top: 20px;
+    }
+    .app_header{
+        height: fit-content;
+    }
+    .app_header > form{
+        width: 70%;
+    }
+}
