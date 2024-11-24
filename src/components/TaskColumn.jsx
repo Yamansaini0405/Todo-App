@@ -9,7 +9,9 @@ function TaskColumn({ type, icon, tasks, status, handleDelete, setActiveCard, on
     <section className="task_column">
       <h2 className="task_column_heading">
         <img className="task_column_icon" src={icon} alt="" /> {type}
+        
       </h2>
+      <hr/>
       <Droparea onDrop={() => onDrop(status, 0)}/>
       {tasks.map(
         (task, idx) =>

@@ -20,3 +20,12 @@
 .task_column:hover{
     transform: scale(1.05);
 }
+hr{
+    margin-top: 10px;
+    width: 90%;
+}
+@media (max-width: 768px){
+    .task_column{
+        height: 50vh;
+    }
+}
