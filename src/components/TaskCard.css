@@ -43,3 +43,13 @@
 .task_delete:hover .delete_icon {
     opacity: 80%;
 }
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.options div input{
+    height: 20px;
+    width: 17px;
+    margin-top: 3px;
+}

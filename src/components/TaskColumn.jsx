@@ -4,7 +4,7 @@ import "./TaskColumn.css";
 import TaskCard from "./TaskCard";
 import Droparea from "./Droparea";
 
-function TaskColumn({ type, icon, tasks, status, handleDelete, setActiveCard, onDrop}) {
+function TaskColumn({ type, icon, tasks, status, handleDelete, setActiveCard, onDrop, handleComplete}) {
   return (
     <section className="task_column">
       <h2 className="task_column_heading">
@@ -17,7 +17,7 @@ function TaskColumn({ type, icon, tasks, status, handleDelete, setActiveCard, on
         (task, idx) =>
           task.status === status && (
            <React.Fragment  key={idx} >
-             <TaskCard title={task.task} tags={task.tags}  handleDelete ={handleDelete} index = {idx} setActiveCard={setActiveCard}/>
+             <TaskCard title={task.task} tags={task.tags}  handleDelete ={handleDelete} index = {idx} status={status} setActiveCard={setActiveCard} handleComplete={handleComplete}/>
              <Droparea onDrop={() => onDrop(status, idx+1)} />
            </React.Fragment>
           )

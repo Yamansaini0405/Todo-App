@@ -21,6 +21,14 @@ const App = () => {
     const newTasks = tasks.filter((task, index) => index !== taskIdx);
     setTasks(newTasks);
   };
+  const handleComplete = (status, taskIdx) => {
+    console.log(`${status} and index is ${taskIdx}`)
+    const completedTask = tasks.filter((task, index) => index == taskIdx)
+    completedTask[0].status="done"
+    setTasks((prev) => {
+      return [...prev, completedTask]
+    })
+}
 
   const onDrop = (status, position) => {
     console.log(`${activeCard} is placing in ${status} column at ${position} position `);
@@ -46,6 +54,7 @@ const App = () => {
           handleDelete={handleDelete}
           setActiveCard={setActiveCard}
           onDrop={onDrop}
+          handleComplete={handleComplete}
         />
         <TaskColumn
           type="Doing"
@@ -55,6 +64,7 @@ const App = () => {
           handleDelete={handleDelete}
           setActiveCard={setActiveCard}
           onDrop={onDrop}
+          handleComplete={handleComplete}
         />
         <TaskColumn
           type="Done"
@@ -64,6 +74,7 @@ const App = () => {
           handleDelete={handleDelete}
           setActiveCard={setActiveCard}
           onDrop={onDrop}
+          handleComplete={handleComplete}
         />
       </main>
       
